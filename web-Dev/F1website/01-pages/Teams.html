@@ -1,0 +1,126 @@
+<!-- Ronald Mercado H.
+     Description: Web-Client Project
+     Date:December 9 2022 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../03-css/main.css"/>    
+    <title>www.monoplaza.sport/teams</title>
+</head>
+
+<script src="../04-JS/jquery-3.6.1.min.js"></script>
+<script src="../04-JS/main.js"></script>
+
+
+<body >
+
+    <header class="header"><!--Topmost Section Header  -->
+
+        <section class="header-container">
+
+            <section class="logo-container" >            
+                    <img id="imgLog" src="../02-images/logoF1News.png"/>           
+            </section>
+
+            <section class="titleWeb-container">
+                <span><h1>Monoplaza</h1></span>        
+            </section>
+        
+        </section> 
+        
+    </header>
+
+    <nav >                    
+        <ul  class="nav-center-section">
+            <li><a href="../index.html" >Home</a></li>
+            <li><a href="./Teams.html">Teams</a></li>
+            <li><a href="./Drivers.html">Drivers</a></li>
+            <li><a href="./Car.html">Car</a></li>
+            <li><a href="./Subscription.html">Subscribe</a></li>
+            <li><a href="./References.html">References</a></li>             
+        </ul>    
+    </nav>
+  
+    
+    <!--Main Content -->
+    <main class="main-content">
+
+        <section>
+            <h1>Teams</h1><br/>
+            
+            <p>Formula One (also known as Formula 1 or F1) is the highest class of international racing for open-wheel single-seater formula racing cars sanctioned by the Fédération Internationale de l'Automobile (FIA). The World Drivers' Championship, which became the FIA Formula One World Championship in 1981, has been one of the premier forms of racing around the world since its inaugural season in 1950. The word formula in the name refers to the set of rules to which all participants' cars must conform.[1] A Formula One season consists of a series of races, known as Grands Prix, which take place worldwide on both purpose-built circuits and closed public roads. </p><br/>
+
+            <h3>Search by name or click on the image</h3><br>
+        </section>
+        
+        <!--Map teams -->
+        <section Id="mapTeams">
+            <img src="../02-images/Teams/teamsLogoMap.jpg" alt="Image:" usemap="#mapTeam-img" />
+            <map name="mapTeam-img" >
+                <area shape="rect" coords = "21,52,129,169" href = "#info-teams" onclick="setTeams('mercedes')">
+                <area shape="rect" coords = "149,52,248,169" href = "#info-teams" onclick="setTeams('alpine')">
+                <area shape="rect" coords = "271,52,370,169" href = "#info-teams" onclick="setTeams('haas')">
+                <area shape="rect" coords = "396,52,493,169" href = "#info-teams" onclick="setTeams('mclaren')">
+                <area shape="rect" coords = "514,52,615,169" href = "#info-teams" onclick="setTeams('alfa romeo')">
+                <area shape="rect" coords = "636,52,741,169" href = "#info-teams" onclick="setTeams('red bull')">
+                <area shape="rect" coords = "760,52,865,169" href = "#info-teams" onclick="setTeams('aston martin')">
+                <area shape="rect" coords = "884,52,982,169" href = "#info-teams" onclick="setTeams('ferrari')">
+                <area shape="rect" coords = "1006,52,1109,169" href = "#info-teams" onclick="setTeams('alphatauri')">
+                <area shape="rect" coords = "1129,52,1231,169" href = "#info-teams" onclick="setTeams('williams')">
+            </map>
+        </section>
+        
+        
+         <!-- Section to display Teams using search function --> 
+ 		<div> 			
+            <form action="server_side.asp" method="post">
+ 				Enter the name of the team:
+                <input type="text" value="team name" id="teamName"/>
+
+ 				<input type="button" value="search team" onclick="checkTeams();" />
+ 				
+                <div id="info-teams">
+                    <p><b>Team: </b><span id="team"></span></p><br>
+                    <p><b>Drivers: </b><span id="drivers"></span></p><br>
+                    <p><b>Chief: </b><span id="chief"></span></p><br>
+                    <p><b>First Team Entry: </b><span id="firstEntry"></span></p><br>
+                    <img src="./Img/none.jpg" alt="Image:" id="readImg" />
+                </div>                		
+            </form>
+ 		</div>
+        
+        
+    </main>
+
+
+    <footer>
+        <section id="links">
+            <div>            
+                <a href="https://www.formula1.com/en.html"><img src="../02-images/Footer/F1-alternate.vresize.350.350.medium.0.webp"></a>
+            </div>
+    
+            <div>
+                <a href="https://www.facebook.com/Formula1"><img src="../02-images/Footer/fb_icon_325x325.png"></a>
+            </div>
+    
+            <div>            
+                <a href="https://www.linkedin.com/in/ronaldm-geo/" href=""><img src="https://lh3.googleusercontent.com/ogw/AOh-ky0kBjlkjJSAUnXtxlrf5e-2079i7-JMWtKEfUze=s32-c-mo"></a>
+            </div>
+
+        </section>
+
+          
+        <div id="text-footer">            
+            <p>© 2022 Web site Monoplaza </p><p>- LaSalle College</p>            
+        </div>
+        <div id="text-footer">            
+            <p>All right belong to Formula One World Championship Limited</p>          
+        </div>
+        
+    </footer>
+</body>
+</html>

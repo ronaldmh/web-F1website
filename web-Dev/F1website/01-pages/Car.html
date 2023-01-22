@@ -1,0 +1,178 @@
+<!-- Ronald Mercado H.
+     Description: Web-Client Project
+     Date:December 9 2022 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../03-css/main.css"/>    
+    <title>www.monoplaza.sport/car</title>
+</head>
+
+<script src="../04-JS/jquery-3.6.1.min.js"></script>
+<script src="../04-JS/main.js"></script>
+
+
+<body>
+
+    <header class="header"><!--Topmost Section Header  -->
+
+        <section class="header-container">
+
+            <section class="logo-container" >            
+                    <img id="imgLog" src="../02-images/logoF1News.png"/>           
+            </section>
+
+            <section class="titleWeb-container">
+                <span><h1>Monoplaza</h1></span>        
+            </section>
+        </section>    
+
+
+        
+    </header>
+
+    <nav>                    
+        <ul  class="nav-center-section">
+            <li><a href="../index.html" >Home</a></li>
+            <li><a href="./Teams.html">Teams</a></li>
+            <li><a href="./Drivers.html">Drivers</a></li>
+            <li><a href="./Car.html">Car</a></li>
+            <li><a href="./Subscription.html">Subscribe</a></li>
+            <li><a href="./References.html">References</a></li> 
+            
+        </ul>    
+    </nav>
+
+    
+    
+    <!--Main Content -->
+    <main>
+
+        <section class="cont-headCar">
+            <h1 class="headCar">Car</h1><br/>            
+            <p class="headCar">A Formula One car (also known as an F1 car) is a single-seat, open-cockpit, open-wheel formula racing car with substantial front and rear wings, and an engine positioned behind the driver, intended to be used in competition at Formula One racing events.</p><br/>
+            
+        </section><br/>
+
+        <!--MAP -->
+        <section class="carMap">
+            <img src="../02-images/Car/carMap.jpg" alt="CarMap" usemap="#f1-car" />
+            
+                <map name="f1-car" id="map" >
+                    <area  shape="circle" coords="440,384,115" title="" href="#" onclick="showContentArea1()"><!--tire area -->
+                    <area shape="rect" coords="152,94,358,109" href="#"  onclick="showContentArea2()"><!--back aileron area -->
+                    <area shape="poly" coords="479,373,530,416,549,472,671,429,876,425,964,393,1036,408,1052,312,1153,442,981,532,770,542,576,551,465,480" alt="CarMap" href="#"  onclick="showContentArea3()" ><!--front aileron area -->
+                    <area shape="circle" coords="863,311,70" href="#" onclick="showContentArea4()"><!--brakes area -->
+                    <area shape="circle" coords="435,122,20" href="#" onclick="showContentArea5()"><!--air cooler area -->
+                    <area shape="rect" coords="407,166,549,207" alt="CarMap" href="#" onclick="showContentArea6()"><!--Driver seat area -->
+                    <area shape="rect" coords="388,74,447,83" alt="CarMap" href="#" onclick="showContentArea7()"><!--Camera area -->
+                    <area shape="rect" coords="307,143,374,224" alt="CarMap" href="#" onclick="showContentArea8()"><!--Motor area -->                   
+                    <!--Text describing carelements -->
+                
+                </map>
+
+                <div id="area1"  class="hidde-text"> 
+                    <table style="width:100%">
+                        <tr>                   
+                            <th><span id="text1">Tires:<br> Soft tyres - Medium tyres - Hard tyres</span></th>                    
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="area2" class="hidde-text"> 
+                    <table style="width:100%">
+                        <tr>                   
+                            <th><span id="text2" >Rear wing:<br>The drag reduction system (DRS).</span></th>                    
+                        </tr>
+                    </table>
+                </div>
+
+                
+                <div id="area3" class="hidde-text"> 
+                    <table style="width:100%">
+                        <tr>                   
+                            <th><span id="text3" >Front wing:<br>Fundamental for the car's aerodynamic performance.</span></th>                    
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="area4" class="hidde-text"> 
+                    <table style="width:60%">
+                        <tr>                   
+                            <th><span id="text3" >Brakes: Able to haul a car doing over 200 mph down to walking speed in a matter of seconds, generating up to 5 g's of force on deceleration<br>.</span></th>                    
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="area5" class="hidde-text"> 
+                    <table style="width:100%">
+                        <tr>                   
+                            <th><span id="text4" >Cooling system:<br>Direct the surrounding air into the vehicle.</span></th>                    
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="area6" class="hidde-text"> 
+                    <table style="width:70%">
+                        <tr>                   
+                            <th><span id="text4" >Driver seat:<br>The seat is tilted back nearly 30 degrees, meaning that the pedal box is higher than your hips.</span></th>                    
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="area7" class="hidde-text"> 
+                    <table style="width:100%">
+                        <tr>                   
+                            <th><span id="text4" >Camera:<br>Onboar camera</span></th>                    
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="area8" class="hidde-text"> 
+                    <table style="width:30%">
+                        <tr>                   
+                            <th><span id="text4" >Engine:<br> four-stroke 1.6 litre V6 engine, which includes a turbocharger and hybrid electric ancillaries, and sees a maximum permitted RPM of 15,000..</span></th>                    
+                        </tr>
+                    </table>
+                </div>                
+
+        </section>
+
+        <div class="sourceImg">
+            <p id="psource">Image Source:https://s3-eu-west-1.amazonaws.com/racingnews-v2-prod/_1200x630_crop_center-center_82_none/E6ajjX2XMAEBoXr.jpg?v=1639504435</p>
+        </div>        
+        
+    </main>
+
+
+    <footer>
+        <section id="links">
+            <div>            
+                <a href="https://www.formula1.com/en.html"><img src="../02-images/Footer/F1-alternate.vresize.350.350.medium.0.webp"></a>
+            </div>
+    
+            <div>
+                <a href="https://www.facebook.com/Formula1"><img src="../02-images/Footer/fb_icon_325x325.png"></a>
+            </div>
+    
+            <div>            
+                <a href="https://www.linkedin.com/in/ronaldm-geo/" href=""><img src="https://lh3.googleusercontent.com/ogw/AOh-ky0kBjlkjJSAUnXtxlrf5e-2079i7-JMWtKEfUze=s32-c-mo"></a>
+            </div>
+
+        </section>
+
+          
+        <div id="text-footer">            
+            <p>© 2022 Web site Monoplaza </p><p>- LaSalle College</p>           
+        </div>
+        <div id="text-footer">            
+            <p>All right belong to Formula One World Championship Limited</p>          
+        </div>
+        
+    </footer>
+</body>
+</html>
